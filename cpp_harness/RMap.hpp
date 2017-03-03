@@ -24,6 +24,7 @@ limitations under the License.
 #include <assert.h>
 #include <stddef.h>
 #include <atomic>
+#include <map>
 #include "Rideable.hpp"
 #include "ConcurrentPrimitives.hpp"
 
@@ -40,6 +41,12 @@ public:
 
 	virtual int32_t get(int32_t key, int tid)=0;
 
+};
+
+class RMapFactory : public virtual RideableFactory{
+public:
+	virtual RMap* build(GlobalTestConfig* gtc)=0;
+	virtual ~RMapFactory(){};
 };
 
 #endif

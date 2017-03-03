@@ -23,10 +23,10 @@ LDIR =./
 
 LIBS=-lpthread 
 
-_DEPS = HarnessUtils.hpp ParallelLaunch.hpp RContainer.hpp TestConfig.hpp DefaultHarnessTests.hpp SGLQueue.hpp HazardTracker.hpp RMap.hpp ConcurrentPrimitives.hpp
+_DEPS = HarnessUtils.hpp ParallelLaunch.hpp RContainer.hpp TestConfig.hpp DefaultHarnessTests.hpp SGLQueue.hpp SGLMap.hpp HazardTracker.hpp RMap.hpp ConcurrentPrimitives.hpp
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = ParallelLaunch.o TestConfig.o DefaultHarnessTests.o SGLQueue.o HarnessUtils.o Recorder.o HazardTracker.o
+_OBJ = ParallelLaunch.o TestConfig.o DefaultHarnessTests.o SGLQueue.o SGLMap.o HarnessUtils.o Recorder.o HazardTracker.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.cpp $(DEPS)

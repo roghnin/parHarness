@@ -23,6 +23,9 @@ limitations under the License.
 #include "DefaultHarnessTests.hpp"
 #include "RContainer.hpp"
 #include "SGLQueue.hpp"
+#include "RMap.hpp"
+#include "SGLMap.hpp"
+
 
 #include <sys/time.h>
 #include <sys/resource.h>

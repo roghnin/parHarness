@@ -42,13 +42,18 @@ int main(int argc, char *argv[])
 
 	gtc->addRideableOption(new SGLQueueFactory(), "SGLQueue (default)");
 	gtc->addRideableOption(new BlockPoolFactory<int>(), "Block Pool Allocator");
+	gtc->addRideableOption(new SGLMapFactory(), "SGLMap");
 
 	gtc->addTestOption(new InsertRemoveTest(), "InsertRemove Test");
 	gtc->addTestOption(new NearEmptyTest(), "NearEmpty Test");
 	gtc->addTestOption(new FAITest(), "FAI Test");
 	gtc->addTestOption(new AllocatorChurnTest(), "AllocatorChurnTest");
 
+	gtc->addTestOption(new MapUnmapTest(), "MapUnmapTest");
+	gtc->addTestOption(new MapVerificationTest(), "MapVerificationTest");
+
 	
+
 	try{
 		gtc->parseCommandLine(argc,argv);
 	}

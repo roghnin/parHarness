@@ -32,7 +32,7 @@ limitations under the License.
 #include <vector>
 #include <list>
 
-class InsertRemoveTest : public Test{
+class  InsertRemoveTest : public Test{
 public:
 	RContainer* q;
 	void init(GlobalTestConfig* gtc);

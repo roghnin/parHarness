@@ -36,4 +36,6 @@ limitations under the License.
 #include "HazardTracker.hpp"
 #include "BlockPool.hpp"
 
+#include "SGLMap.hpp"
+
 #endif
