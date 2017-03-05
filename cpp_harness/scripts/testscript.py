@@ -32,16 +32,25 @@ os.environ['PATH'] = dirname(realpath(__file__))+\
 
 # execution ----------------
 for i in range(0,5):
-	cmd = "metacmd.py dqs -i 10 -m 2 -v -a ../cpp_harness/affinity/even_odds.aff "+\
+	#Rideable 0 : SGLQueue (default)
+	#Rideable 1 : Block Pool Allocator
+	#Rideable 2 : SGLMap
+	#Test Mode 0 : InsertRemove Test
+	#Test Mode 1 : NearEmpty Test
+	#Test Mode 2 : FAI Test
+	#Test Mode 3 : AllocatorChurnTest
+	#Test Mode 4 : MapUnmapTest
+	#Test Mode 5 : MapVerificationTest
+	cmd = "metacmd.py harness -i 10 -m 4 -v -a ../affinity/even_odds.aff "+\
 	" --meta t:1...4:6:8:16:20:24:32:36:37:40:44:48:54:60:64:71"+\
-	" --meta r:0...19 -o data/3-15-15.csv"
-	#os.system(cmd)
-	cmd = "metacmd.py dqs -i 10 -m 0 -v  "+\
-	" --meta t:1...4:6:8:16:20:24:32:36:37:40:44:48:54:60:64:71"+\
-	" -o data/3-15-15-fai.csv"
-	#os.system(cmd)
-        cmd = "metacmd.py dqs -i 10 -m 2 -v  "+\
-        " --meta t:1...4:6:8:16:20:24:32:36:37:40:44:48:54:60:64:71"+\
-        " --meta r:14 -o data/3-15-15.csv"
-        os.system(cmd)
+	" --meta r:2 -o ../data/hs_test.csv"
+	os.system(cmd)
+	#cmd = "metacmd.py dqs -i 10 -m 0 -v  "+\
+	#" --meta t:1...4:6:8:16:20:24:32:36:37:40:44:48:54:60:64:71"+\
+	#" -o data/3-15-15-fai.csv"
+	##os.system(cmd)
+    #    cmd = "metacmd.py dqs -i 10 -m 2 -v  "+\
+    #    " --meta t:1...4:6:8:16:20:24:32:36:37:40:44:48:54:60:64:71"+\
+    #    " --meta r:14 -o data/3-15-15.csv"
+    #    os.system(cmd)
 
