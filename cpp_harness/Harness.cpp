@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
 	gtc->addRideableOption(new SGLQueueFactory(), "SGLQueue (default)");
 	gtc->addRideableOption(new BlockPoolFactory<int>(), "Block Pool Allocator");
 	gtc->addRideableOption(new SGLMapFactory(), "SGLMap");
+	gtc->addRideableOption(new LFHashMapFactory(), "LFHashMap");
 
 	gtc->addTestOption(new InsertRemoveTest(), "InsertRemove Test");
 	gtc->addTestOption(new NearEmptyTest(), "NearEmpty Test");

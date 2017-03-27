@@ -37,5 +37,6 @@ limitations under the License.
 #include "BlockPool.hpp"
 
 #include "SGLMap.hpp"
+#include "LFHashMap.hpp"
 
 #endif
